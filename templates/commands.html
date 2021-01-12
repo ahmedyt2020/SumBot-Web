@@ -1,0 +1,401 @@
+{% extends 'main.html' %}
+{% block body %}
+<div style="margin-top: 15%;"></div>
+
+<div class="container text-center">
+	<div class="card">
+		<div class="card-header">
+			<h3>Commands</h3>
+		</div>
+		<div class="card-body">
+			<button onclick="generalCommands()" class="btn btn-outline-info btn-lg"><i class="fas fa-bullhorn"></i> General</button>
+			&nbsp;
+			<button onclick="musicCommands()" class="btn btn-outline-info btn-lg"><i class="fas fa-music"></i> Music</button>
+			&nbsp;
+			<button onclick="funCommands()" class="btn btn-outline-info btn-lg"><i class="far fa-smile-beam"></i> Fun</button>
+			&nbsp;
+			<button onclick="giveawayCommands()" class="btn btn-outline-info btn-lg"><i class="fas fa-gift"></i> Giveaway</button>
+			&nbsp;
+			<button onclick="modCommands()" class="btn btn-outline-info btn-lg"><i class="fas fa-tools"></i> Moderator</button>
+					
+		</div>
+		
+		<hr>
+
+		<div id="general" hidden >
+			<h2><i class="fas fa-bullhorn"></i> General</h2>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr>
+				<th scope="col">Command</th>
+				<th scope="col">Description</th>
+				<th scope="col">Example</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+				<td>help</td>
+				<td>Shows all command</td>
+				<td><code>@help [command]</code></td>
+				</tr>
+				<tr>
+				<td>invite</td>
+				<td>Add the bot to your server</td>
+				<td><code>@invite</code></td>
+				</tr>
+				<tr>
+				<td>ping</td>
+				<td>Shows ping tha bot</td>
+				<td><code>@ping</code></td>
+				</tr>
+				<tr>
+				<td>profile</td>
+				<td>Show user and your profile</td>
+				<td><code>@profile</code></td>
+				</tr>
+				<tr>
+				<td>avatar</td>
+				<td>Shows your avatar</td>
+				<td><code>@avatar</code></td>
+				</tr>
+				<tr>
+				<td>avatar server</td>
+				<td>Shows avatar server</td>
+				<td><code>@avatar server</code></td>
+				</tr>
+				<tr>
+				<td>avatar bot</td>
+				<td>Shows avatar bot</td>
+				<td><code>@avatar bot</code></td>
+				</tr>
+				<tr>
+				<td>length</td>
+				<td>length your arg</td>
+				<td><code>@len [message]</code></td>
+				</tr>
+				<tr>
+				<td>server info</td>
+				<td>Shows server info</td>
+				<td><code>@server</code></td>
+				</tr>
+				
+				<tr>
+				<td>botinfo</td>
+				<td>Show botinfo</td>
+				<td><code>@botinfo</code></td>
+				</tr>
+				<tr>
+				<td>userinfo</td>
+				<td>Show userinfo</td>
+				<td><code>@user</code></td>
+				</tr>
+
+			</tbody>
+			</table>
+			<br>
+		</div>
+		<div id="music" hidden >
+			<h2><i class="fas fa-music"></i> Music</h2>
+		<table class="table table-dark table-hover">
+			<thead>
+				<tr>
+				<th scope="col">Command</th>
+				<th scope="col">Description</th>
+				<th scope="col">Example</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+				<td>play</td>
+				<td>playing music</td>
+				<td><code>@play [name or link]</code></td>
+				</tr>
+				<tr>
+				<td>loop</td>
+				<td>Loops the currently playing song, toggle on/off</td>
+				<td><code>@loop on/off</code></td>
+				</tr>
+				<tr>
+				<td>shuffle</td>
+				<td>Shuffle the queuet</td>
+				<td><code>@Shuffle</code></td>
+				</tr>
+				<tr>
+				<td>pause</td>
+				<td>Pause Music</td>
+				<td><code>@pause</code></td>
+				</tr>
+				<tr>
+				<td>queue</td>
+				<td>Shows the songs in queue</td>
+				<td><code>@queue</code></td>
+				</tr>
+				<tr>
+				<td>stop</td>
+				<td>Stop Music</td>
+				<td><code>@stop</code></td>
+				</tr>
+				<tr>
+				<td>skip</td>
+				<td>Skip a song</td>
+				<td><code>@skip</code></td>
+				</tr>
+				<tr>
+				<td>cls</td>
+				<td>Clear the queue</td>
+				<td><code>@cls</code></td>
+				</tr>
+				<tr>
+				<td>back</td>
+				<td>Go back one Song</td>
+				<td><code>@prev</code></td>
+				</tr>
+				
+				<tr>
+				<td>resume</td>
+				<td>Resume Music</td>
+				<td><code>@resume</code></td>
+				</tr>
+				<tr>
+				<td>songinfo</td>
+				<td>Info about current Song</td>
+				<td><code>@songinfo</code></td>
+				</tr>
+				<tr>
+				<td>connect</td>
+				<td>Connect bot to voicechannel</td>
+				<td><code>@connect</code></td>
+				</tr>
+				<tr>
+				<td>disconnect</td>
+				<td>Disonnect bot from voicechannel</td>
+				<td><code>@disconnect</code></td>
+				</tr>
+			</tbody>
+			</table>
+			<br>
+		</div>
+		
+		<div id="fun" hidden >
+			<h2><i class="far fa-smile-beam"></i> Fun</h2>
+			<table class="table table-dark table-hover">
+			<thead>
+				<tr>
+				<th scope="col">Command</th>
+				<th scope="col">Description</th>
+				<th scope="col">Example</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>roll</td>
+			<td>roll nameber</td>
+			<td><code>@roll [namber]</code></td>
+		</tr>
+		<tr>
+			<td>smart</td>
+			<td>IQ proportions to fun</td>
+			<td><code>@iq [@member]</code></td>
+		</tr>
+		<tr>
+			<td>tag</td>
+			<td>Rewrite what you say fondly</td>
+			<td><code>@tag [message]</code></td>
+		</tr>
+		<tr>
+			<td>revers</td>
+			<td>to reverse message to fun</td>
+			<td><code>@rev [message]</code></td>
+		</tr>       
+
+		<tr>
+			<td>clyde</td>
+			<td>To make a clyde bot write whatever you want</td>
+			<td><code>@clyde [message]</code></td>
+		</tr>
+
+		<tr>
+			<td>vs</td>
+			<td>To make a competitive match between two people</td>
+			<td><code>@vs [@member1] [@member2]</code></td>
+		</tr>
+
+		<tr>
+			<td>magik</td>
+			<td>Modify the profile picture to become funny</td>
+			<td><code>@magik [@member]</code></td>
+		</tr>
+
+		<tr>
+			<td>iphone</td>
+			<td>Modify the profile picture to be on iPhone 11 Pro</td>
+			<td><code>@iphone [@member]</code></td>
+		</tr>
+
+		<tr>
+			<td>youtube</td>
+			<td>To write a comment in YouTube for fun</td>
+			<td><code>@youtube [message]</code></td>
+		</tr>
+
+		<tr>
+			<td>captcha</td>
+			<td>To make his photos look really interesting</td>
+			<td><code>@captcha</code></td>
+		</tr>
+
+		<tr>
+			<td>tweet</td>
+			<td>Writing his tweet on Twitter</td>
+			<td><code>@tweet [username] [text]</code></td>
+		</tr>
+
+		<tr>
+			<td>triggered</td>
+			<td>None</td>
+			<td><code>@triggered</code></td>
+		</tr>
+			<tr>
+			<td>cat</td>
+			<td>to show random img cat</td>
+			<td><code>@cat</code></td>
+		</tr>
+		<tr>
+			<td>panda</td>
+			<td>to show random img panda</td>
+			<td><code>@panda</code></td>
+		</tr>
+		<tr>
+			<td>coffee</td>
+			<td>to show random img coffee</td>
+			<td><code>@coffee</code></td>
+		</tr>
+		<tr>
+			<td>fox</td>
+			<td>to show random img fox</td>
+			<td><code>@profile</code></td>
+		</tr>
+		<tr>
+			<td>dog</td>
+			<td>to show random img dog</td>
+			<td><code>@dog</code></td>
+		</tr>
+		<tr>
+			<td>redpanda</td>
+			<td>to show random img redpanda</td>
+			<td><code>@redpanda</code></td>
+		</tr>
+			</tbody>
+			</table>
+			<br>
+		</div>
+		
+		
+		<div id="giveaway" hidden >
+			<h2><i class="fas fa-gift"></i> Giveaway</h2>
+			<table class="table table-dark table-hover">
+		<thead>
+		<tr>
+			<th scope="col">Command</th>
+			<th scope="col">Description</th>
+			<th scope="col">Example</th>
+		</tr>
+		</thead>
+		<tbody>
+<tr>
+			<td>gcreate</td>
+			<td>create giveaway</td>
+			<td><code>@gcreate</code></td>
+		</tr>
+		<tr>
+			<td>gstart</td>
+			<td>Create a fast giveawayy</td>
+			<td><code>@gstart [Time] [prize]</code></td>
+		</tr>
+		<tr>
+			<td>reroll</td>
+			<td>re roll a random winner</td>
+			<td><code>@reroll [@channel] [id_message]</code></td>
+		</tr>
+		
+
+		</tbody>
+	</table>
+	</br>
+	</div>
+		
+		<div id="mod" hidden >
+			<h2><i class="fas fa-tools"></i> Moderator</h2>
+			<table class="table table-dark table-hover">
+		<thead>
+			<tr>
+			<th scope="col">Command</th>
+			<th scope="col">Description</th>
+			<th scope="col">Example</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>say</td>
+			<td>say your message</td>
+			<td><code>@say [message]</code></td>
+			</tr>
+			<tr>
+			<td>embed</td>
+			<td>say your message embed</td>
+			<td><code>@embed [message]</code></td>
+			</tr>
+			<tr>
+			<td>clear</td>
+			<td>Delete messages in the channel</td>
+			<td><code>@clear [namber]</code></td>
+			</tr>
+			<tr>
+			<td>hide</td>
+			<td>hide permission channel</td>
+			<td><code>@hide</code></td>
+			</tr>
+
+			<tr>
+			<td>unhide</td>
+			<td>unhide permission channel</td>
+			<td><code>@unhide</code></td>
+			</tr>
+
+			<tr>
+			<td>lock</td>
+			<td>lock permission channel</td>
+			<td><code>@lock</code></td>
+			</tr>
+			<tr>
+			<td>unlock</td>
+			<td>unlock permission channel</td>
+			<td><code>@unlock</code></td>
+			</tr>
+			<tr>
+			<td>echo</td>
+			<td>send message to channel</td>
+			<td><code>@echo [@channel] [message]</code></td>
+			</tr>
+
+			<tr>
+			<td>poll</td>
+			<td>create the poll</td>
+			<td><code>@poll [message]</code></td>
+			</tr>
+		
+			<tr>
+			<td>nickname</td>
+			<td>add and remove nickname</td>
+			<td><code>@nick [member]</code></td>
+			</tr>	
+
+		</tbody>
+		</table>
+		<br>
+	</div>
+
+</div>
+
+
+{% endblock %}

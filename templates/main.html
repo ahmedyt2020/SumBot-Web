@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<title>{{ pagetitle }}</title>
+		<link rel="icon" href="{{ url_for('static',filename='img/S.png') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/app.css') }}">
+		<meta charset="UTF-8">
+		<meta name="author" content="SumBot Team">
+		<meta name="keywords" content="SumBot, discord, discord-bot, Bot, probot, discord-prime, hack-bot">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="SumBot is best discord bot fun, member, mod">
+		<meta property="og:title" content="SumBot" />
+		<meta property="og:description" content="SumBot is best discord bot fun, member, mod" />
+		<meta property="og:url" content="/"/>
+		<meta name="theme-color" content="#0098ff"/>
+		<meta property="og:image" content="https://media.discordapp.net/attachments/770316779968135168/796480572033728512/80fe08903a578133.jpg?width=960&height=432"/>
+		<meta name="twitter:card" content="summary_large_image">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-185620848-1"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <div class="container-fluid">
+			<a class="navbar-brand" href="/" title="home page">
+				<i class="fab fa-stripe-s"></i>umBot
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+				  <a class="nav-link active" aria-current="page" href="/" title="home page"><i class="fas fa-home"></i> Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="commands">Commands</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" target="_blank" href="support" title="support server">Support</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" target="_blank" href="invite" title="invite bot">Invite</a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+		
+
+    {% block body %}
+    {% endblock %}
+    <div style="margin-top: 25%;"></div>
+
+    		<div class="container">
+			<div class="card text-center">
+				<div class="card-header">
+					<h1>SumBot</h1>
+				</div>
+				<div class="card-body">
+					<h4>©️ All rights reserved SumBot Team</h4>
+				</div>
+			</div>
+		</div>
+        </div>
+    	<div class="container">
+            <br><br>
+            <br><br>
+		    <hr>
+        </div>
+
+		<div style="size: 100;" class="container">
+        <p>
+            <a href="source" target="_block" title="source code">
+			    <img src="{{ url_for('static', filename='img/github.webp') }}" alt="" width="48" height="48">
+            </a>
+            &nbsp;
+            <a href="support" target="_block" title="support server">
+			    <img src="{{ url_for('static', filename='img/discord.png') }}" alt="" width="48" height="48"> 
+            </a>
+        </p>
+		<br><br>
+		<br><br>
+        </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+	</body>
+</html>
